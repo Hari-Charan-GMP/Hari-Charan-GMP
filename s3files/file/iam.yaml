@@ -1,1 +1,11 @@
-
+Resources:
+  myUser:
+    Type: 'AWS::IAM::User'
+    Properties:
+      UserName: test12345 #give a name to this user
+      LoginProfile: #specify a password for this user
+        Password: wK8{Ap^hQG<@LlB
+        PasswordResetRequired: false #make this user to set a new password on next sign-in
+      Path: '/'
+      Groups: #attach this user to the list of existing groups
+          - admin
